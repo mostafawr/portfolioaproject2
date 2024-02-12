@@ -80,7 +80,7 @@ ALTER TABLE NashvilleHousing
 Add PropertySplitAddress Nvarchar(255);
 
 Update NashvilleHousing
-SET PropertySplitAddress = SUBSTRING(PropertyAddress, 1, CHARINDEX(',', PropertyAddress) -1 )
+SET PropertySplitAddress = SUBSTRING(PropertyAddress, 1, CHARINDEX(',', PropertyAddress) -1, LEN(PropertyAddress) )
 
 
 ALTER TABLE NashvilleHousing
